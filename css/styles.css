@@ -1,0 +1,131 @@
+
+body {
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: roboto, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #265AA1;
+  }
+  
+  p {
+    color: #000000;
+  }
+
+  /* Headings */
+  
+  .big-heading {
+    font-family: libre-franklin, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1.5em;
+  }
+  
+  .section-heading {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+  /* Containers */
+  .container-fluid{
+    padding: 3% 8%;
+  }
+
+  .header-container {
+      padding: 2% 8%;
+  }
+
+  /* Sections */
+  .blue-section {
+    padding: 5% 0;
+    background-color: #ECF4FF;
+    color: #000000;
+  }
+  
+  .white-section {
+    padding: 5% 0;
+    background-color: #fff;
+  }
+  
+  /* Navigation Bar */
+  
+  .navbar {
+    padding: 0 0 4.5rem;
+    color: #000000;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    color: #000000;
+}
+  
+  .navbar-brand {
+    font-family: libre-franklin, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.0rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+  
+  .nav-item {
+    padding: 0 18px;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+  }
+
+  /* Search Bar */
+  .form-control-borderless {
+    border: none;
+  }
+
+  .form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .form-control-lg, .input-group-lg>.form-control, .input-group-lg>.input-group-append>.btn, .input-group-lg>.input-group-append>.input-group-text, .input-group-lg>.input-group-prepend>.btn, .input-group-lg>.input-group-prepend>.input-group-text {
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+  .btn-success {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+  }
+
+  .btn-success:hover 
+  {
+    color: #fff;
+    background-color: #265AA1;
+    border-color: #265AA1;
+  }
+  
+  /* Images */
+  .img-fluid {
+    max-width: 60%;
+    height: auto;
+}
+
+
+  /* Buttons */
+  .submit-button {
+    margin: 5% 3% 5% 0;
+  }
+  
