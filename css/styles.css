@@ -233,6 +233,7 @@ p {
 .item8 {
   grid-area: resources;
   align-items: center;
+  text-align: center;
 }
 
 .card {
