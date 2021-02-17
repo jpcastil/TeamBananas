@@ -212,6 +212,8 @@ p {
   letter-spacing: -0.02em;
   /* Black */
   color: #23242A;
+  text-align: left;
+  padding: 2% 20%;
 }
 
 .item4 {
@@ -233,7 +235,6 @@ p {
 .item8 {
   grid-area: resources;
   align-items: center;
-  text-align: center;
 }
 
 .card {
