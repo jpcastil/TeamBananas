@@ -226,6 +226,25 @@ p {
   grid-area: movie;
 }
 
+.item7 {
+  grid-area: entry;
+}
+
+.item8 {
+  grid-area: resources;
+  align-items: center;
+}
+
+.card {
+  margin: 0 auto;
+  /* Added */
+  float: none;
+  /* Added */
+  margin-bottom: 10px;
+  /* Added */
+  text-align: left;
+}
+
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -235,6 +254,8 @@ p {
     'movie movie movie movie menu menu menu menu menu menu'
     'movie movie movie movie menu menu menu menu menu menu'
     'movie movie movie movie menu menu menu menu menu menu'
+    'entry entry entry entry entry entry entry entry entry entry'
+    'resources resources resources resources resources resources resources resources resources resources'
     'footer footer footer footer footer footer footer footer footer footer';
   grid-gap: 20px;
 }
