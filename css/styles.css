@@ -130,11 +130,88 @@ p {
 }
 
 .item2 {
-  grid-area: title;
+  grid-area: menu;
+  text-align: left;
+}
+
+.title-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 135.94%;
+  /* or 82px */
+  letter-spacing: 0.02em;
+  color: #23242A;
+  text-align: left;
+}
+
+.rating {
+  border: 1px solid;
+  border-top-color: initial;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: initial;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: initial;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: initial;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 28px;
+  line-height: 28px;
+  margin: 2px 5px 2px 5px;
+  max-height: 32px;
+  padding-top: 1px;
+  padding-right: 3px;
+  padding-bottom: 1px;
+  padding-left: 3px;
+  transform: translateY(-1px);
+  font-family: Roboto, arial, sans-serif;
+  text-align: left;
+}
+
+.title-genre {
+  display: inline-block;
+  font-size: 28px;
+}
+
+.title-date {
+  display: inline-block;
+  font-size: 28px;
+}
+
+.title-plot {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 170%;
+  /* or 37px */
+  color: #000000;
 }
 
 .item3 {
   grid-area: status;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 110%;
+  /* or 40px */
+  letter-spacing: -0.02em;
+  /* Black */
+  color: #23242A;
 }
 
 .item4 {
@@ -148,30 +225,16 @@ p {
 .item6 {
   grid-area: movie;
 }
-.item7 {
-  grid-area: length;
-}
-.item8 {
-  grid-area: genre;
-}
-.item9 {
-  grid-area: date;
-}
-.item10 {
-  grid-area: summary;
-}
-.item11 {
-  grid-area: triggers;
-}
+
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header header header header header header header header header'
     'status status status status search search search search search search'
-    'movie movie movie movie title title title title title title'
-    'movie movie movie movie length length genre genre date date'
-    'movie movie movie movie plot plot plot plot plot plot'
-    'movie movie movie movie triggers triggers triggers triggers triggers triggers'
+    'movie movie movie movie menu menu menu menu menu menu'
+    'movie movie movie movie menu menu menu menu menu menu'
+    'movie movie movie movie menu menu menu menu menu menu'
+    'movie movie movie movie menu menu menu menu menu menu'
     'footer footer footer footer footer footer footer footer footer footer';
   grid-gap: 20px;
 }
