@@ -237,6 +237,12 @@ p {
   align-items: center;
 }
 
+.item9 {
+  grid-area: more;
+  align-items: center;
+  padding: 0 3%;
+}
+
 .card {
   margin: 0 auto;
   /* Added */
@@ -257,6 +263,7 @@ p {
     'movie movie movie movie menu menu menu menu menu menu'
     'movie movie movie movie menu menu menu menu menu menu'
     'entry entry entry entry entry entry entry entry entry entry'
+    'more more more more more more more more more more'
     'resources resources resources resources resources resources resources resources resources resources'
     'footer footer footer footer footer footer footer footer footer footer';
   grid-gap: 20px;
