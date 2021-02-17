@@ -2,7 +2,6 @@ body {
   font-family: montserrat, sans-serif;
   font-weight: 400;
   font-style: normal;
-  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,6 +13,21 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   color: #000000;
+  line-height: 2rem;
+}
+
+.header-container a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.header-container p{
+  text-align: center;
+}
+
+.movies-container a {
+  text-decoration: none;
+  color: #265AA1;
 }
 
 /* Headings */
@@ -33,11 +47,25 @@ p {
 
 /* Containers */
 .container-fluid {
-  padding: 3% 8%;
+  padding: 0 10%;
+}
+
+.container-footer {
+  padding: 0 10%;
+  text-align: center;
 }
 
 .header-container {
-  padding: 2% 8%;
+  padding: 2% 5%;
+}
+
+.movies-container {
+  padding: 2% 10%;
+}
+
+
+.button {
+  text-align: center;
 }
 
 /* Sections */
@@ -45,11 +73,24 @@ p {
   padding: 5% 0;
   background-color: #ECF4FF;
   color: #000000;
+  text-align: center;
 }
 
 .white-section {
   padding: 5% 0;
-  background-color: #fff;
+  background-color: F2F2F2;
+}
+
+.form-bg {
+  padding: 5%;
+  margin: 0 5% 5% 0;
+  background-color: #F2F2F2;
+}
+
+.tw-bg {
+  padding: 5%;
+  margin: 10% 0 ;
+  background-color: #F2F2F2;
 }
 
 /* Navigation Bar */
@@ -101,6 +142,7 @@ p {
   border-radius: .3rem;
 }
 
+/* Buttons */
 .btn-success {
   color: #fff;
   background-color: #000000;
@@ -113,6 +155,7 @@ p {
   border-color: #265AA1;
 }
 
+
 /* Images */
 .img-fluid {
   max-width: 60%;
@@ -124,23 +167,13 @@ p {
   margin: 5% 3% 5% 0;
 }
 
-/* Movie Title Grid*/
-.item1 {
-  grid-area: header;
-}
-
-.item2 {
-  grid-area: menu;
-  text-align: left;
-}
+/* Movie Title*/
 
 .title-name {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 60px;
-  line-height: 135.94%;
-  /* or 82px */
+  font-size: 5rem;
   letter-spacing: 0.02em;
   color: #23242A;
   text-align: left;
@@ -148,127 +181,39 @@ p {
 
 .rating {
   border: 1px solid;
-  border-top-color: initial;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-right-color: initial;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-bottom-color: initial;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-left-color: initial;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
+  border-color: initial;
+  border-style: solid;
+  border-width: 1px;
   border-radius: 3px;
   box-sizing: border-box;
   display: inline-block;
-  font-size: 28px;
-  line-height: 28px;
-  margin: 2px 5px 2px 5px;
-  max-height: 32px;
-  padding-top: 1px;
-  padding-right: 3px;
-  padding-bottom: 1px;
-  padding-left: 3px;
-  transform: translateY(-1px);
-  font-family: Roboto, arial, sans-serif;
-  text-align: left;
+  padding: 1px 3px 1px 3px;
 }
 
 .title-genre {
   display: inline-block;
-  font-size: 28px;
 }
 
 .title-date {
   display: inline-block;
-  font-size: 28px;
 }
 
 .title-plot {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
   line-height: 170%;
-  /* or 37px */
   color: #000000;
-}
-
-.item3 {
-  grid-area: status;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 110%;
-  /* or 40px */
-  letter-spacing: -0.02em;
-  /* Black */
-  color: #23242A;
-  text-align: left;
-  padding: 2% 20%;
-}
-
-.item4 {
-  grid-area: search;
-}
-
-.item5 {
-  grid-area: footer;
-}
-
-.item6 {
-  grid-area: movie;
-}
-
-.item7 {
-  grid-area: entry;
-}
-
-.item8 {
-  grid-area: resources;
-  align-items: center;
-}
-
-.item9 {
-  grid-area: more;
-  align-items: center;
-  padding: 0 3%;
 }
 
 .card {
   margin: 0 auto;
-  /* Added */
   float: none;
-  /* Added */
   margin-bottom: 10px;
-  /* Added */
   text-align: left;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header header header header header'
-    'status status status status search search search search search search'
-    'movie movie movie movie menu menu menu menu menu menu'
-    'movie movie movie movie menu menu menu menu menu menu'
-    'movie movie movie movie menu menu menu menu menu menu'
-    'movie movie movie movie menu menu menu menu menu menu'
-    'entry entry entry entry entry entry entry entry entry entry'
-    'more more more more more more more more more more'
-    'resources resources resources resources resources resources resources resources resources resources'
-    'footer footer footer footer footer footer footer footer footer footer';
-  grid-gap: 20px;
+.card-text {
+  text-align: left;
 }
 
-.grid-container>div {
-  /*text-align: center;*/
-}

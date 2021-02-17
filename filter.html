@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Soothe | Filter</title>
+      <!-- Adobe Fonts -->
+      <link rel="stylesheet" href="https://use.typekit.net/tze3ghk.css">
+      <link rel="stylesheet" href="https://use.typekit.net/tze3ghk.css">
+      <link rel="stylesheet" href="https://use.typekit.net/tze3ghk.css">
+      <!-- CSS Stylesheets -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/styles.css">
+      <!-- Bootstrap Scripts -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!-- FontAwesome CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <div class="header-container">
+         <!-- Nav Bar -->
+         <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">Soothe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="search.html">Search</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="resources.html">Resources</a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+      <!-- Navigation Header & Search Bar -->
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg">
+               <br>
+               <h1>Filters</h1>
+            </div>
+            <div class="col-sm-6">
+               <form class="card card-sm">
+                  <div class="card-body row no-gutters align-items-center">
+                     <div class="col-auto">
+                        <i class="fas fa-search h4 text-body"></i>
+                     </div>
+                     <div class="col">
+                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a trigger warning to filter out ">
+                     </div>
+                     <div class="col-auto">
+                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- Movie Filter Section -->
+      <section class="white-section">
+         <div class="movies-container">
+            <div class="row">
+               <!-- Filter -->
+               <div class="col-sm">
+                  <form>
+                     <!-- Sort By -->
+                     <div class="form-bg">
+                        <div class="form-group">
+                           <label for="exampleFormControlSelect1">Sort By</label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Latest</option>
+                              <option>Most Viewed</option>
+                              <option>Popular</option>
+                           </select>
+                        </div>
+                        <!-- Title Type -->
+                        <div class="form-group">
+                           <label for="exampleFormControlSelect1">Title Type</label>
+                           <br>
+                           <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-secondary active">
+                              <input type="radio" name="options" id="option1" autocomplete="off" checked>Movie
+                              </label>
+                              <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="option2" autocomplete="off"> TV Series
+                              </label>
+                              <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="option3" autocomplete="off"> TV Episode
+                              </label>
+                           </div>
+                        </div>
+                        <!-- Genre -->
+                        <div class="form-group">
+                           <label for="exampleFormControlSelect1">Genre</label>
+                           <br>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                              <label class="form-check-label" for="inlineCheckbox1">Action</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                              <label class="form-check-label" for="inlineCheckbox2">Animation</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                              <label class="form-check-label" for="inlineCheckbox3">Comedy</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                              <label class="form-check-label" for="inlineCheckbox4">Crime</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                              <label class="form-check-label" for="inlineCheckbox5">Drama</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+                              <label class="form-check-label" for="inlineCheckbox6">Fantasy</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                              <label class="form-check-label" for="inlineCheckbox7">Historical</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+                              <label class="form-check-label" for="inlineCheckbox8">Horror</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">
+                              <label class="form-check-label" for="inlineCheckbox9">Romance</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10">
+                              <label class="form-check-label" for="inlineCheckbox10">Science Fiction</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11">
+                              <label class="form-check-label" for="inlineCheckbox11">Thriller</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="option12">
+                              <label class="form-check-label" for="inlineCheckbox12">Western</label>
+                           </div>
+                        </div>
+                        <!-- Ratings -->
+                        <div class="form-group">
+                           <label for="exampleFormControlSelect1">Rating</label>
+                           <br>
+                           <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-secondary active">
+                              <input type="radio" name="options" id="option1" autocomplete="off" checked>9+
+                              </label>
+                              <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="option2" autocomplete="off"> 8+
+                              </label>
+                              <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="option3" autocomplete="off"> 7+
+                              </label>
+                              <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="option4" autocomplete="off"> 6+
+                              </label>
+                              <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="option5" autocomplete="off"> 5+
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <!-- Movie Images -->
+               <div class="col-lg-8">
+                  <div class="row">
+                     <div class="col-md-4 mb-5">
+                        <div class="card h-100" style="max-width: 24rem;">
+                           <img class="card-img-top" src="images/brave.jpg" alt="">
+                           <div class="card-body">
+                              <h4 class="card-title">Brave</h4>
+                              <p class="card-text">2012 | 1h 40m | Family/Adventure </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4 mb-5">
+                        <div class="card h-100" style="max-width: 24rem;">
+                           <img class="card-img-top" src="images/wreck.jpg" alt="">
+                           <div class="card-body">
+                              <h4 class="card-title">Wreck It Ralph</h4>
+                              <p class="card-text">2012 | 1h 48m | Family/Comedy </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4 mb-5">
+                        <div class="card h-100" style="max-width: 24rem;">
+                           <img class="card-img-top" src="images/soul1.jpg" alt="">
+                           <div class="card-body">
+                              <h4 class="card-title"><a href="title.html">Soul</a></h4>
+                              <p class="card-text">2020 | 1h 47m | Drama/Animation </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-4 mb-5">
+                        <div class="card h-100" style="max-width: 24rem;">
+                           <img class="card-img-top" src="images/up.jpg" alt="">
+                           <div class="card-body">
+                              <h4 class="card-title">Up</h4>
+                              <p class="card-text">2009 | 1h 36m | Family/Adventure </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4 mb-5">
+                        <div class="card h-100" style="max-width: 24rem;">
+                           <img class="card-img-top" src="images/shrek.jpg" alt="">
+                           <div class="card-body">
+                              <h4 class="card-title">Shrek</h4>
+                              <p class="card-text">2001 | 1h 35m | Comedy/Fantasy </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4 mb-5">
+                        <div class="card h-100" style="max-width: 24rem;">
+                           <img class="card-img-top" src="images/moana.jpg" alt="">
+                           <div class="card-body">
+                              <h4 class="card-title">Moana</h4>
+                              <p class="card-text">2016 | 1h 23m | Family/Adventure </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Footer -->
+      <footer class="white-section" id="footer">
+         <div class="container-footer">
+            <p>© Copyright 2021 Soothe • Made with lots of caffeine in San Luis Obispo.</p>
+         </div>
+      </footer>
+   </body>
+</html>
