@@ -46,7 +46,7 @@
          <div class="row">
             <div class="col-lg">
                <br>
-               <h1>Filters > SOUL</h1>
+               <h1 id="filterName">Filters > MOVIE</h1>
             </div>
             <div class="col-sm-6">
                <form class="card card-sm">
@@ -58,7 +58,7 @@
                         <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a trigger warning to filter out ">
                      </div>
                      <div class="col-auto">
-                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                        <button class="btn btn-lg btn-success" onclick="loadTitle()" type="submit">Search</button>
                      </div>
                   </div>
                </form>
@@ -219,5 +219,6 @@
             <p>© Copyright 2021 Soothe • Made with lots of caffeine in San Luis Obispo.</p>
          </div>
       </footer>
+      <script src="title.js" charset="utf-8"></script>
    </body>
 </html>
