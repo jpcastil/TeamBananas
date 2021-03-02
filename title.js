@@ -1,45 +1,67 @@
+//main function that will load all the title's information
 function loadTitleInfo() {
   var x;
+  var list = ["Drama", "Animation"];
+  var date = "25 December 2020";
+  var plot = "After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife.";
   // Get the value of the input field with id="searchT"
   x = document.getElementById("filterName").innerHTML;
   var res = x.replace("MOVIE", "SOUL");
   document.getElementById("filterName").innerHTML = res;
-  loadTitleName();
-  loadTitleRating();
-  loadTitleData();
-  loadTitlePlot()
+  loadTitleName("Soul");
+  loadTitleRating("pg");
+  loadTitleData(list, 107, date);
+  loadTitlePlot(plot)
 }
 
-function loadTitleName() {
-  var x;
-  // Get the value of the input field with class="title-name"
-  x = document.getElementsByClassName("title-name")[0].innerHTML;
-  var res = x.replace("MOVIE", "SOUL");
-  document.getElementsByClassName("title-name")[0].textContent = res;
+// "name" : takes in name string to display on title page & capitalizes it
+function loadTitleName(name) {
+  document.getElementsByClassName("title-name")[0].textContent = name.toUpperCase();
 }
 
-function loadTitleRating() {
-  var x;
+// "mpa" : takes in mpa string to display title rating
+function loadTitleRating(rating) {
   // Get the value of the input field with class="rating"
-  x = document.getElementsByClassName("rating")[0].innerHTML;
-  var res = x.replace("X", "PG");
-  document.getElementsByClassName("rating")[0].textContent = res;
+  document.getElementsByClassName("rating")[0].textContent = rating.toUpperCase();
 }
-
-function loadTitleData() {
-  var time = "1hr 47min";
-  var genre = "Drama/Animation";
-  var date = "25 December 2020";
-  var info = time + " | " + genre + " | " + date;
+// "genre" "time" "date" : takes in list, int and int to display title genre(s), length, & date respectively
+function loadTitleData(genreList, time, date) {
+  var length = convertTime(time);
+  var genre = displayGenres(genreList);
+  var info = length + " | " + genre + " | " + date;
   // Get the value of the input field with class="title-name"
   var x = document.getElementsByClassName("title-data")[0].innerHTML;
 
   document.getElementsByClassName("title-data")[0].textContent = info;
 }
 
-function loadTitlePlot() {
-  // Get the value of the input field with class="title-name"
-  //var x = document.getElementsByClassName("title-plot")[0].textContent;
-  var plot = "<br>After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife.<br>";
-  document.getElementsByClassName("title-plot")[0].innerHTML = plot;
+// "plot" : takes in plot string to display title plot description
+function loadTitlePlot(plot) {
+  document.getElementsByClassName("title-plot")[0].innerHTML = "<br>" + plot + "<br>";
+}
+
+// "time" : converts it to a string to display
+function convertTime(time){
+  var minutes = time % 60;
+  var hours = Math.floor(time/60);
+  if (hours == 0){
+    return minutes + "min";
+  }
+  else if (minutes == 0){
+    return hours + "hr ";
+  }
+  else{
+    return hours + "hr " + minutes + "min";
+  }
+}
+
+// "genre" : takes in the list of genres and converts it to a string to display
+// Q: if there is only one genre will the genre variable still be a list or a string?
+function displayGenres(genre){
+  var res = "";
+  for (index = 0; index < genre.length; index++) {
+    res += genre[index] + "/";
+  }
+  res = res.substr(0, res.length-1);
+  return res;
 }
