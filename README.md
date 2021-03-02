@@ -81,6 +81,34 @@ API.py
     
     #######################################
 
+    Same JSON output 
+
+    [
+      {
+        "IMDBid": "tt0241527", 
+        "_id": "603dbf6b25c254c6f95a99f1", 
+        "date": 2001, 
+        "genre": [
+          "Adventure", 
+          "Family", 
+          "Fantasy"
+        ], 
+        "mpa": "PG", 
+        "name": "Harry Potter and the Sorcerer's Stone", 
+        "plot": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.", 
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg", 
+        "time": 152, 
+        "titleType": "movie", 
+        "triggers": [
+          "nudity", 
+          "violence", 
+          "profanity", 
+          "alcohol", 
+          "frightening"
+        ]
+      }
+    ]
+
 server.py 
   Make sure to set environment variables: 
   export FLASK_APP=server.py
