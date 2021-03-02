@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Soothe | Title</title>
+      <!-- Adobe Fonts -->
+      <link rel="stylesheet" href="https://use.typekit.net/tze3ghk.css">
+      <link rel="stylesheet" href="https://use.typekit.net/tze3ghk.css">
+      <link rel="stylesheet" href="https://use.typekit.net/tze3ghk.css">
+      <!-- CSS Stylesheets -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/styles.css">
+      <!-- Bootstrap Scripts -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!-- FontAwesome CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <div class="header-container">
+         <!-- Nav Bar -->
+         <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">Soothe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="search.html">Search</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="resources.html">Resources</a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+      <!-- Navigation Header & Search Bar -->
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg">
+               <br>
+               <h1 id="filterName">Filters > MOVIE</h1>
+            </div>
+            <div class="col-sm-6">
+               <form class="card card-sm">
+                  <div class="card-body row no-gutters align-items-center">
+                     <div class="col-auto">
+                        <i class="fas fa-search h4 text-body"></i>
+                     </div>
+                     <div class="col">
+                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a trigger warning to filter out ">
+                     </div>
+                     <div class="col-auto">
+                        <button class="btn btn-lg btn-success" onclick="loadTitle(); return false;" type="submit">Search</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- Movie Title Section -->
+      <section class="white-section">
+         <div class="movies-container">
+            <div class="row">
+               <!-- Movie Poster -->
+               <div class="col-sm">
+                  <img src="images/soul.jpg" class="img-fluid" alt="Responsive image" style="min-width: 90%;">
+               </div>
+               <!-- Movie Description -->
+               <div class="col-sm">
+                  <div class="title-name">MOVIE</div>
+                  <div class="rating">PG</div>
+                  <div class="title-genre"> 1hr 47m | Drama/Animation | </div>
+                  <div class="title-date">25 December 2020</div>
+                  <div class="title-plot">
+                     <br>After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife.<br>
+                  </div>
+                  <!-- Trigger Warnings -->
+                  <div class="tw-bg">
+                     <p>Trigger Warnings</p>
+                     <button type="button" class="btn btn-dark">Sex & Nudity</button>
+                     <button type="button" class="btn btn-dark">Violence & Gore</button>
+                     <button type="button" class="btn btn-dark">Profanity</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Trigger Warning Not Listed Section -->
+      <section class="blue-section">
+         <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg-8">
+               <h1>Trigger warning not listed?</h1>
+               <p>Help us improve our data by submitting a trigger warning request!</p>
+            </div>
+            <div class="col-sm">
+               <br>
+               <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
+               Submit a trigger warning request
+               </button>
+            </div>
+            <!-- Pop-up modal for Trigger Warning Request-->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Submit a Trigger Warning Request</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
+                        <form>
+                           <div class="row">
+                              <div class="col">
+                                 <label for="titleName">SUBMISSION FOR: </label>
+                                 <input type="text" class="form-control" id="titleName" placeholder="Title of Movie">
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col">
+                                 <label for="userName"><br>NAME: </label>
+                                 <input type="text" class="form-control" id="userName" placeholder="Required">
+                              </div>
+                              <div class="col">
+                                 <label for="userEmail"><br>EMAIL: </label>
+                                 <input type="text" class="form-control" placeholder="Required">
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col">
+                                 <label for="titleName"><br>TRIGGER WARNING: </label>
+                                 <input type="text" class="form-control" id="titleName" placeholder="Add a New Trigger Warning">
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-dark">Submit</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      </section>
+      <!-- Resources Section -->
+      <section class="white-section">
+      <div class="container-fluid">
+      <h1><br>Resources<br><br></h1>
+      <div class="row">
+      <div class="col-sm-6">
+      <div class="card" style="max-width: 30rem;">
+      <div class="card-body">
+      <h5 class="card-title">View national health resources</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Read More</a>
+      </div>
+      </div>
+      </div>
+      <div class="col-sm-6">
+      <div class="card" style="max-width: 30rem;">
+      <div class="card-body">
+      <h5 class="card-title">View local health resources</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Read More</a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section>
+      <!-- More Like This Section -->
+      <section class="white-section">
+      <div class="container-fluid">
+      <h1><br>More Like This<br><br></h1>
+      <div class="row">
+      <div class="col-md-4 mb-5">
+      <div class="card h-100" style="max-width: 24rem;">
+      <img class="card-img-top" src="images/brave.jpg" alt="">
+      <div class="card-body">
+      <h4 class="card-title">Brave</h4>
+      <p class="card-text">2012 | 1h 40m | Family/Adventure </p>
+      </div>
+      </div>
+      </div>
+      <div class="col-md-4 mb-5">
+      <div class="card h-100" style="max-width: 24rem;">
+      <img class="card-img-top" src="images/wreck.jpg" alt="">
+      <div class="card-body">
+      <h4 class="card-title">Wreck It Ralph</h4>
+      <p class="card-text">2012 | 1h 48m | Family/Comedy </p>
+      </div>
+      </div>
+      </div>
+      <div class="col-md-4 mb-5">
+      <div class="card h-100" style="max-width: 24rem;">
+      <img class="card-img-top" src="images/moana.jpg" alt="">
+      <div class="card-body">
+      <h4 class="card-title">Moana</h4>
+      <p class="card-text">2016 | 1h 23m | Family/Adventure </p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section>
+      <!-- Footer -->
+      <footer class="white-section" id="footer">
+         <div class="container-footer">
+            <p>© Copyright 2021 Soothe • Made with lots of caffeine in San Luis Obispo.</p>
+         </div>
+      </footer>
+      <script src="title.js" charset="utf-8"></script>
+   </body>
+</html>
