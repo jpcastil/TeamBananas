@@ -7,6 +7,7 @@ function loadTitleInfo() {
   loadTitleName();
   loadTitleRating();
   loadTitleData();
+  loadTitlePlot()
 }
 
 function loadTitleName() {
@@ -33,6 +34,12 @@ function loadTitleData() {
   // Get the value of the input field with class="title-name"
   var x = document.getElementsByClassName("title-data")[0].innerHTML;
 
-  //var res = x.replace("X", "PG");
   document.getElementsByClassName("title-data")[0].textContent = info;
+}
+
+function loadTitlePlot() {
+  // Get the value of the input field with class="title-name"
+  //var x = document.getElementsByClassName("title-plot")[0].textContent;
+  var plot = "<br>After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife.<br>";
+  document.getElementsByClassName("title-plot")[0].innerHTML = plot;
 }
