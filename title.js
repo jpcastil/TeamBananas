@@ -11,7 +11,8 @@ function loadTitleInfo() {
   loadTitleName("Soul");
   loadTitleRating("pg");
   loadTitleData(list, 107, date);
-  loadTitlePlot(plot)
+  loadTitlePlot(plot);
+  loadTitlePoster("https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg");
 }
 
 // "name" : takes in name string to display on title page & capitalizes it
@@ -38,6 +39,11 @@ function loadTitleData(genreList, time, date) {
 // "plot" : takes in plot string to display title plot description
 function loadTitlePlot(plot) {
   document.getElementsByClassName("title-plot")[0].innerHTML = "<br>" + plot + "<br>";
+}
+
+// "poster" : takes in poster string to display the title poster image
+function loadTitlePoster(url){
+  document.getElementById("poster").src= url;
 }
 
 // "time" : converts it to a string to display
