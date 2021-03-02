@@ -2,6 +2,7 @@
 function loadTitleInfo() {
   var x;
   var list = ["Drama", "Animation"];
+  var list2 = ["Sex & Nudity", "Violence & Gore", "Profanity"]
   var date = "25 December 2020";
   var plot = "After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife.";
   // Get the value of the input field with id="searchT"
@@ -12,7 +13,8 @@ function loadTitleInfo() {
   loadTitleRating("pg");
   loadTitleData(list, 107, date);
   loadTitlePlot(plot);
-  loadTitlePoster("https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg");
+  loadTitlePoster("https://803277.smushcdn.com/1580116/wp-content/uploads/2020/03/pixar-reveals-new-poster-for-soul-and-teases-trailer-release-tomorrow.jpeg?lossy=0&strip=0&webp=1");
+  displayTriggers(list2);
 }
 
 // "name" : takes in name string to display on title page & capitalizes it
@@ -70,4 +72,19 @@ function displayGenres(genre){
   }
   res = res.substr(0, res.length-1);
   return res;
+}
+
+// "triggers" : takes in the list of triggers and displays them on the title page
+function displayTriggers(triggers) {
+
+  for (index = 0; index < triggers.length; index ++)
+  {
+    var node = document.createElement("button");
+    node.setAttribute("type", "button");
+    node.className = "btn btn-dark";
+    var textnode = document.createTextNode(triggers[index]);
+    node.appendChild(textnode);
+    document.getElementById("triggers").appendChild(node);
+  }
+
 }
