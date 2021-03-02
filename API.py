@@ -15,7 +15,7 @@ def get_titles(name, n):
   querystring = {"q":name}
 
   headers = {
-    'x-rapidapi-key': "4c8b8183cdmshb889b48c24c1ed9p13c189jsnca4713f47f7c",
+    'x-rapidapi-key': "8699824412msh8ef33d085b31646p101875jsnb9404152fe59",
     'x-rapidapi-host': "imdb8.p.rapidapi.com"
   }
   response = requests.request("GET", url, headers=headers, params=querystring)
@@ -64,7 +64,7 @@ def get_plot(imdbID):
   querystring = {"tconst":imdbID}
 
   headers = {
-    'x-rapidapi-key': "4c8b8183cdmshb889b48c24c1ed9p13c189jsnca4713f47f7c",
+    'x-rapidapi-key': "8699824412msh8ef33d085b31646p101875jsnb9404152fe59",
     'x-rapidapi-host': "imdb8.p.rapidapi.com"
   }
 
@@ -83,7 +83,7 @@ def get_mpa(imdbID):
   querystring = {"ids": imdbID,"region":"US"}
 
   headers = {
-    'x-rapidapi-key': "4c8b8183cdmshb889b48c24c1ed9p13c189jsnca4713f47f7c",
+    'x-rapidapi-key': "8699824412msh8ef33d085b31646p101875jsnb9404152fe59",
     'x-rapidapi-host': "imdb8.p.rapidapi.com"
   }
   
@@ -101,7 +101,7 @@ def get_triggers(imdbID):
   querystring = {"tconst":imdbID}
 
   headers = {
-    'x-rapidapi-key': "4c8b8183cdmshb889b48c24c1ed9p13c189jsnca4713f47f7c",
+    'x-rapidapi-key': "8699824412msh8ef33d085b31646p101875jsnb9404152fe59",
     'x-rapidapi-host': "imdb8.p.rapidapi.com"
   }
 
@@ -122,7 +122,7 @@ def get_genres(imdbID):
   url = "https://imdb8.p.rapidapi.com/title/get-genres"
   querystring = {"tconst":imdbID}
   headers = {
-      'x-rapidapi-key': "4c8b8183cdmshb889b48c24c1ed9p13c189jsnca4713f47f7c",
+      'x-rapidapi-key': "8699824412msh8ef33d085b31646p101875jsnb9404152fe59",
       'x-rapidapi-host': "imdb8.p.rapidapi.com"
       }
 
