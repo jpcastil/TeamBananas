@@ -8,7 +8,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: roboto, sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+h1, h2 {
   color: #265AA1;
+}
+
+h3, h4, h5 {
+  color: #000000;
 }
 
 p {
@@ -28,6 +35,11 @@ p {
 .movies-container a {
   text-decoration: none;
   color: #265AA1;
+}
+
+.credits {
+  text-align: center;
+  padding: 3% 0;
 }
 
 /* Headings */
