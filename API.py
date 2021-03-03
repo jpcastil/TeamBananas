@@ -24,7 +24,7 @@ def get_titles(name, n):
     return -1
 
   res = json.loads(response.text)
-
+  print(res)
   data = [item for item in res['results'] if ('titleType' in item and (item['titleType'] == 'movie' or item['titleType'] == 'tvSeries'))]
   titles = []
   i = 0

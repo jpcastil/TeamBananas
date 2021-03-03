@@ -76,7 +76,6 @@ function displayGenres(genre){
 
 // "triggers" : takes in the list of triggers and displays them on the title page
 function displayTriggers(triggers) {
-
   for (index = 0; index < triggers.length; index ++)
   {
     var node = document.createElement("button");
@@ -86,5 +85,4 @@ function displayTriggers(triggers) {
     node.appendChild(textnode);
     document.getElementById("triggers").appendChild(node);
   }
-
 }
