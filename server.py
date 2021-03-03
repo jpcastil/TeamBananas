@@ -13,7 +13,6 @@ class MyEncoder(json.JSONEncoder):
       return str(obj)
     return super(MyEncoder, self).default(obj)
 
-
 app = Flask(__name__)
 CORS(app)
 
@@ -56,33 +55,38 @@ TODO: Verify user input (Make sure they're not trying to be malciious)
 @app.route('/titles/', methods=['GET'])
 def get_users():
    if request.method == 'GET':
-      """ ONLY FOR TESTING """
+      """ 
+      ONLY FOR TESTING
       resp = jsonify(sample_data)
       resp.status_code = 200
       return resp
-      """ END OF TESTING SECTION 
-      """
+      END OF TESTING SECTION 
+      """ 
+      
       query = request.args.get('query')
 
+      print(query)
 
       api_call = get_titles(query, 1)
       
+      print(api_call)
+
       if api_call == -1: 
-         resp = jsonify([])
-         resp.status_code = 404
+        resp = jsonify([])
+        resp.status_code = 404
       else: 
-         resp = jsonify([title.__dict__ for title in api_call])
-         resp.status_code = 200
+        resp = jsonify([title.__dict__ for title in api_call])
+        resp.status_code = 200
 
-      return resp
-
+      return resp 
+      """
       titles = media.find_one({"name": query})
       if titles == None :
-         print("Comes here")
-         titles = [title.__dict__ for title in get_titles(query, 1)] # Calls API & Converts to JSON format
-         x = media.insert(titles)
+        print("Comes here")
+        titles = [title.__dict__ for title in get_titles(query, 1)] # Calls API & Converts to JSON format
+        x = media.insert(titles)
 
       resp = jsonify(titles)
       resp.status_code = 200 
       return resp
-    """
+      """
