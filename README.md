@@ -5,6 +5,8 @@ A banana is an elongated, edible fruit – botanically a berry – produced by s
 
 Documentation 
 
+Install Visual Studio Code Live Server Extension to start up the front-end
+
 Title.py
   Allows for the representation of a title (movie or tv series)
 
