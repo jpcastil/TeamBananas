@@ -19,9 +19,8 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
    <body>
-      <div class="header-container">
          <!-- Nav Bar -->
-         <nav class="navbar navbar-expand-lg navbar-light">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="index.html">Soothe</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
             <span class="navbar-toggler-icon"></span>
@@ -29,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                     <a class="nav-link" href="search.html">Search</a>
+                     <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="about.html">About</a>
@@ -40,22 +39,23 @@
                </ul>
             </div>
          </nav>
-      </div>
+         <div class="header-container">
       <!-- Navigation Header & Search Bar -->
+      <br>
       <div class="container-fluid">
          <div class="row">
-            <div class="col-lg">
+            <div class="col-lg-6">
                <br>
-               <h1 id="filterName">Filters > MOVIE</h1>
+               <h1 id="filterName">MOVIE</h1>
             </div>
-            <div class="col-sm-6">
+            <div class="col-lg-6">
                <form class="card card-sm">
                   <div class="card-body row no-gutters align-items-center">
                      <div class="col-auto">
                         <i class="fas fa-search h4 text-body"></i>
                      </div>
                      <div class="col">
-                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a trigger warning to filter out ">
+                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for a movie">
                      </div>
                      <div class="col-auto">
                         <button class="btn btn-lg btn-success" onclick="loadTitleInfo(); return false;" type="submit">Search</button>
@@ -67,11 +67,11 @@
       </div>
       </div>
       <!-- Movie Title Section -->
-      <section class="white-section">
-         <div class="movies-container">
+      <section>
+         <div class="container-fluid">
             <div class="row">
                <!-- Movie Poster -->
-               <div class="col-sm">
+               <div class="col-sm-6">
                   <img src="images/soul.jpg" class="img-fluid" id="poster" alt="Responsive image" style="min-width: 90%;">
                </div>
                <!-- Movie Description -->
@@ -152,7 +152,7 @@
             </div>
       </section>
       <!-- Resources Section -->
-      <section class="white-section">
+      <section>
       <div class="container-fluid">
       <h1><br>Resources<br><br></h1>
       <div class="row">
@@ -183,7 +183,7 @@
       <h1><br>More Like This<br><br></h1>
       <div class="row">
       <div class="col-md-4 mb-5">
-      <div class="card h-100" style="max-width: 24rem;">
+      <div class="card h-100" style="max-width: 20rem;">
       <img class="card-img-top" src="images/brave.jpg" alt="">
       <div class="card-body">
       <h4 class="card-title">Brave</h4>
@@ -192,7 +192,7 @@
       </div>
       </div>
       <div class="col-md-4 mb-5">
-      <div class="card h-100" style="max-width: 24rem;">
+      <div class="card h-100" style="max-width: 20rem;">
       <img class="card-img-top" src="images/wreck.jpg" alt="">
       <div class="card-body">
       <h4 class="card-title">Wreck It Ralph</h4>
@@ -201,7 +201,7 @@
       </div>
       </div>
       <div class="col-md-4 mb-5">
-      <div class="card h-100" style="max-width: 24rem;">
+      <div class="card h-100" style="max-width: 20rem;">
       <img class="card-img-top" src="images/moana.jpg" alt="">
       <div class="card-body">
       <h4 class="card-title">Moana</h4>
@@ -214,9 +214,9 @@
       </div>
       </section>
       <!-- Footer -->
-      <footer class="white-section" id="footer">
+      <footer class="white-section bg-light" id="footer">
          <div class="container-footer">
-            <p>© Copyright 2021 Soothe • Made with lots of caffeine in San Luis Obispo.</p>
+            <p class="text-muted">© Copyright 2021 Soothe • Made with lots of caffeine in San Luis Obispo.</p>
          </div>
       </footer>
       <script src="js/title.js" charset="utf-8"></script>
