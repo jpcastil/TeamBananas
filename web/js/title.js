@@ -1,20 +1,23 @@
 //main function that will load all the title's information
-function loadTitleInfo(name, genres, triggers, date, plot, type) {
+function loadTitleInfo(name, genres, triggers, date, plot, type, rating, image) {
   var x;
-  var list = ["Drama", "Animation"];
-  var list2 = ["Sex & Nudity", "Violence & Gore", "Profanity"]
-  var date = "25 December 2020";
-  var plot = "After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife.";
+  var list = genres;
+  var list2 = triggers.map(str => capFirstChar(str));; 
+  var date = date;
   // Get the value of the input field with id="searchT"
   x = document.getElementById("filterName").innerHTML;
-  var res = x.replace("MOVIE", name.toUpperCase);
+  var res = x.replace("MOVIE", type.toUpperCase());
   document.getElementById("filterName").innerHTML = res;
-  loadTitleName("Soul");
-  loadTitleRating("pg");
+  loadTitleName(name);
+  loadTitleRating(rating);
   loadTitleData(list, 107, date);
   loadTitlePlot(plot);
-  loadTitlePoster("https://803277.smushcdn.com/1580116/wp-content/uploads/2020/03/pixar-reveals-new-poster-for-soul-and-teases-trailer-release-tomorrow.jpeg?lossy=0&strip=0&webp=1");
+  loadTitlePoster(image);
   displayTriggers(list2);
+}
+
+function capFirstChar(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 // "name" : takes in name string to display on title page & capitalizes it
@@ -98,8 +101,10 @@ function getParameterByName(name, url = window.location.href) {
 
 window.onload = function main(){
   let id = getParameterByName("query"); 
-  let json = JSON.parse(localStorage.getItem(id)); 
-  console.log(json)
+  let title = JSON.parse(localStorage.getItem(id)); 
+  console.log(title)
 
-  loadTitleInfo()
+  // (name, genres, triggers, date, plot, type, rating, image)
+
+  loadTitleInfo(title.name, title.genre, title.triggers, title.date, title.plot, title.titleType, title.mpa, title.poster)
 }
