@@ -3,7 +3,7 @@ from flask import request
 from flask import jsonify
 from flask_cors import CORS
 from bson.json_util import ObjectId
-from API import get_titles 
+from API import get_titles, search_movie
 import pymongo 
 import json
 
@@ -31,11 +31,19 @@ def get_users():
    if request.method == 'GET':
       query = request.args.get('query')
 
-      titles = media.find_one({"name": query})
+      title = search_movie(query)
+
+      if(title == -1):
+         return []
+
+      print("Searched for ", title)   
+
+      titles = media.find_one({"name": title})
+
       if titles == None :
-         print("Comes here")
-         titles = [title.__dict__ for title in get_titles(query, 1)] # Calls API & Converts to JSON format
-         x = media.insert(titles)
+        print("Not in database so adding")
+        titles = [title.__dict__ for title in get_titles(query, 1)] # Calls API & Converts to JSON format
+        x = media.insert(titles)
 
       resp = jsonify(titles)
       resp.status_code = 200 
