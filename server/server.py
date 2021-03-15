@@ -59,10 +59,13 @@ def get_users():
       ONLY FOR TESTING
       resp = jsonify(sample_data)
       resp.status_code = 200
+
+      query = request.args.get('query')
+      print(query)
+      
       return resp
       END OF TESTING SECTION 
-      """ 
-      
+      """
       query = request.args.get('query')
 
       print(query)
@@ -79,6 +82,8 @@ def get_users():
         resp.status_code = 200
 
       return resp 
+
+
       """
       titles = media.find_one({"name": query})
       if titles == None :
