@@ -3,7 +3,7 @@ from flask import request
 from flask import jsonify
 from flask_cors import CORS
 from bson.json_util import ObjectId
-from API import get_titles 
+from API import get_titles, search_movie
 import pymongo 
 import json
 
@@ -55,43 +55,22 @@ TODO: Verify user input (Make sure they're not trying to be malciious)
 @app.route('/titles/', methods=['GET'])
 def get_users():
    if request.method == 'GET':
-      """ 
-      ONLY FOR TESTING
-      resp = jsonify(sample_data)
-      resp.status_code = 200
 
       query = request.args.get('query')
-      print(query)
-      
-      return resp
-      END OF TESTING SECTION 
-      """
-      query = request.args.get('query')
+      title = search_movie(query)
 
-      print(query)
+      if(title == -1):
+         return []
 
-      api_call = get_titles(query, 1)
-      
-      print(api_call)
+      print("Searched for ", title)   
 
-      if api_call == -1: 
-        resp = jsonify([])
-        resp.status_code = 404
-      else: 
-        resp = jsonify([title.__dict__ for title in api_call])
-        resp.status_code = 200
+      titles = media.find_one({"name": title})
 
-      return resp 
-
-
-      """
-      titles = media.find_one({"name": query})
       if titles == None :
-        print("Comes here")
+        print("Not in database so adding")
         titles = [title.__dict__ for title in get_titles(query, 1)] # Calls API & Converts to JSON format
         x = media.insert(titles)
 
       resp = jsonify(titles)
       resp.status_code = 200 
       return resp
-      """
