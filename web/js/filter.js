@@ -96,15 +96,26 @@ function getJSON(){
 }
 
 window.onload = function(){
+    clearTitles(); 
     if (window.location.href.indexOf("=") == -1){
         return;
     }
-    let index = window.location.href.indexOf("=")
-    console.log(window.location.href.substring(index + 1))
-    
+    let query = window.location.href.substring(window.location.href.indexOf("=") + 1); 
+    fetch(`http://127.0.0.1:5000/titles/?query=${query}`)
+        .then(res => res.json())
+        .then(json => loadJSON(json))
 }
 
-clearTitles(); 
+function loadJSON(json){
+    let titles = document.getElementById("titles");
+    for (let i = 0; i < json.length; i ++){
+        // Append HTML 
+        let titleHTML = createTitleHTML(json[i].poster, json[i].name, json[i].date, beautifyMinutes(json[i].time), beautifyGenres(json[i].genre), json[i]._id); 
+        titles.append(titleHTML);
+        // Store JSON 
+        localStorage.setItem(json[i]._id, JSON.stringify(json[i]))
+    }
+}
 
 let title =  {
     "IMDBid": "tt0241527", 
@@ -129,22 +140,3 @@ let title =  {
       "frightening"
     ]
 }; 
-
-let titles = document.getElementById("titles");
-localStorage.setItem(title._id, JSON.stringify(title))
-
-let titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre), title._id); 
-titles.appendChild(titleHTML)
-
-titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre), title._id); 
-titles.appendChild(titleHTML)
-
-titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre), title._id); 
-titles.appendChild(titleHTML)
-
-titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre), title._id); 
-titles.appendChild(titleHTML)
-
-console.log(titles);
-console.log(titleHTML)
-titles.appendChild(titleHTML)
