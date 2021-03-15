@@ -10,6 +10,37 @@ from Title import Title
           Handle Errors from the requests (i.e. What if it is not a 200 status code?)
           Parse request into a list of title objects (NEED to create Class Title First)
 """
+def is_valid(obj):
+  return "id" in obj and "title" in obj and "titleType" in obj and "runningTimeInMinutes" in obj \
+    and "year" in obj and "image" in obj 
+
+""" param: String of the media name, n integer titles
+    Returns: List of Titles, -1 on error 
+    TODO: Validate input 
+          Verify correct codes 
+          Handle Errors from the requests (i.e. What if it is not a 200 status code?)
+          Parse request into a list of title objects (NEED to create Class Title First)
+"""
+
+def search_movie(search_keyword):
+  url = "https://imdb8.p.rapidapi.com/title/find"
+  querystring = {"q":search_keyword}
+
+  headers = {
+    'x-rapidapi-key': "8699824412msh8ef33d085b31646p101875jsnb9404152fe59",
+    'x-rapidapi-host': "imdb8.p.rapidapi.com"
+  }
+  response = requests.request("GET", url, headers=headers, params=querystring)
+
+  if response.status_code != 200: 
+    return -1
+
+  res = json.loads(response.text)
+  data = [item for item in res['results'] if is_valid(item)]
+  obj = data[0]
+  name = obj['title']
+  return name
+
 def get_titles(name, n): 
   url = "https://imdb8.p.rapidapi.com/title/find"
   querystring = {"q":name}
