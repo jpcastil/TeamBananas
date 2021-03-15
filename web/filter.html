@@ -19,29 +19,33 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
    <body>
-      <div class="header-container">
-         <!-- Nav Bar -->
-         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html">Soothe</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-               <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                     <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="resources.html">Resources</a>
-                  </li>
-               </ul>
-            </div>
-         </nav>
-      </div>
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="index.html">Soothe</a>
+         <button
+           class="navbar-toggler"
+           type="button"
+           data-toggle="collapse"
+           data-target="#navbarTogglerDemo02"
+         >
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+           <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+               <a class="nav-link" href="index.html">Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="about.html">About</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="resources.html">Resources</a>
+             </li>
+           </ul>
+         </div>
+       </nav>
       <!-- Navigation Header & Search Bar -->
+      <br><br>
       <div class="container-fluid">
          <div class="row">
             <div class="col-lg">
@@ -55,7 +59,7 @@
                         <i class="fas fa-search h4 text-body"></i>
                      </div>
                      <div class="col">
-                        <input class="form-control form-control-lg form-control-borderless" type="search" id="searchT" onkeypress="return event.keyCode != 13" placeholder="Search a title, see triggers">
+                        <input class="form-control form-control-lg form-control-borderless" type="search" id="searchT" onkeypress="return event.keyCode != 13" placeholder="Search a title">
                      </div>
                      <div class="col-auto">
                         <button class="btn btn-lg btn-success" type="submit">Search</button>
