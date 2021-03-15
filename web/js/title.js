@@ -1,5 +1,5 @@
 //main function that will load all the title's information
-function loadTitleInfo() {
+function loadTitleInfo(name, genres, triggers, date, plot, type) {
   var x;
   var list = ["Drama", "Animation"];
   var list2 = ["Sex & Nudity", "Violence & Gore", "Profanity"]
@@ -7,7 +7,7 @@ function loadTitleInfo() {
   var plot = "After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife.";
   // Get the value of the input field with id="searchT"
   x = document.getElementById("filterName").innerHTML;
-  var res = x.replace("MOVIE", "SOUL");
+  var res = x.replace("MOVIE", name.toUpperCase);
   document.getElementById("filterName").innerHTML = res;
   loadTitleName("Soul");
   loadTitleRating("pg");
@@ -85,4 +85,21 @@ function displayTriggers(triggers) {
     node.appendChild(textnode);
     document.getElementById("triggers").appendChild(node);
   }
+}
+
+function getParameterByName(name, url = window.location.href) {
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+window.onload = function main(){
+  let id = getParameterByName("query"); 
+  let json = JSON.parse(localStorage.getItem(id)); 
+  console.log(json)
+
+  loadTitleInfo()
 }

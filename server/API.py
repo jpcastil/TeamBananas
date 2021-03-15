@@ -2,6 +2,10 @@ import requests
 import json
 from Title import Title 
 
+def is_valid(obj):
+  return "id" in obj and "title" in obj and "titleType" in obj and "runningTimeInMinutes" in obj \
+    and "year" in obj and "image" in obj 
+
 """ param: String of the media name, n integer titles
     Returns: List of Titles, -1 on error 
 
@@ -24,8 +28,8 @@ def get_titles(name, n):
     return -1
 
   res = json.loads(response.text)
-  print(res)
-  data = [item for item in res['results'] if ('titleType' in item and (item['titleType'] == 'movie' or item['titleType'] == 'tvSeries'))]
+
+  data = [item for item in res['results'] if is_valid(item)]
   titles = []
   i = 0
 
@@ -34,14 +38,34 @@ def get_titles(name, n):
     imdbID = obj['id'][7:-1]
     name = obj['title']
     titleType = obj['titleType']
-    genre = get_genres(imdbID)
-    mpa = get_mpa(imdbID)
+
+    try:
+      genre = get_genres(imdbID)
+    except:
+      genre = ["NULL"]
+    
+    try:
+      mpa = get_mpa(imdbID)
+    except: 
+      mpa = "NA"
+    
     time = obj['runningTimeInMinutes']
     date = obj['year']
-    plot = get_plot(imdbID)
-    poster = obj['image']['url']
-    triggers = get_triggers(imdbID)
 
+    try: 
+      plot = get_plot(imdbID)
+    except: 
+      plot = "NA"
+
+    poster = obj['image']['url']
+
+    try: 
+      triggers = get_triggers(imdbID)
+    except: 
+      triggers = ["NA"]
+
+    print(name, titleType, genre, mpa, time, date, plot, imdbID, poster, triggers)
+    
     t = Title(name, titleType, genre, mpa, time, date, plot, imdbID, poster, triggers)
     titles.append(t)
 
@@ -133,7 +157,7 @@ def get_genres(imdbID):
   return res
 
 if __name__ == "__main__":
-  titles = get_titles("Harry Potter", 3)
+  titles = get_titles("Harry Potter", 1)
   for title in titles: 
     print(title.__dict__)
     print(title)
