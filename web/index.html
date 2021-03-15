@@ -44,16 +44,17 @@
          <section class="white-section">
             <div class="container-fluid">
                <h1 class="big-heading">Expect the unexpected.</h1>
-               <p class="mt-5 mb-5" style="font-size: 1.1em;">Trigger warnings acknowledge and respect that people must deal with their trauma when they are ready; therefore, Soothe hopes to help survivors avoid from reliving an event, reduce distress, and prepare mentally.</p>
+               <p id="description" class="mt-5 mb-5" style="font-size: 1.1em;">Trigger warnings acknowledge and respect that people must deal with their trauma when they are ready; therefore, Soothe hopes to help survivors avoid from reliving an event, reduce distress, and prepare mentally.</p>
                <div class="row justify-content-center">
                   <div class="col-12 col-md-10 col-lg-8">
-                     <form class="card card-sm">
+                     <p id="warning">Please enter a title</p>
+                     <form id="inputParent"  class="card card-sm">
                         <div class="card-body row no-gutters align-items-center">
                            <div class="col-auto">
                               <i class="fas fa-search h4 text-body"></i>
                            </div>
                            <div class="col">
-                              <input class="form-control form-control-lg form-control-borderless" type="search" id="searchT" placeholder="Search a title, see triggers">
+                              <input class="form-control form-control-lg form-control-borderless" onkeypress="return event.keyCode != 13" type="search" id="searchT" placeholder="Search a title, see triggers">
                            </div>
                            <div class="col-auto">
                               <!-- onclick="loadTitleInfo(); return false;" -->
@@ -66,45 +67,65 @@
             </div>
          </section>
       </div>
-      <!-- Features -->
-      <section class="blue-section">
+
+      <!-- Features under MD-->
+      <section class="blue-section d-md-none">
          <div class="container-fluid">
             <div class="row">
                <div class="feature-box col-lg-4">
-                  <img src="images/filter.png" class="img-fluid" alt="Responsive image">
-                  <h3 class="feature-title">Filter out triggering content.</h3>
-                  <p><br>Reduce distressing material by filtering out sensitive content above and you will have many shows/movies to choose from.</p>
+                  <img src="images/filter.png" class="img-fluid" style="max-width: 25vw;" alt="Responsive image">
+                  <h3 class="feature-title mt-2 mb-2">Filter out triggering content.</h3>
+                  <p>Reduce distressing material by filtering out sensitive content above and you will have many shows/movies to choose from.</p>
                </div>
                <div class="feature-box col-lg-4">
-                  <img src="images/people.png" class="img-fluid" alt="Responsive image">
-                  <h3 class="feature-title">Learn why trigger warnings matter.</h3>
+                  <img src="images/people.png" class="img-fluid" style="max-width: 25vw;" alt="Responsive image">
+                  <h3 class="feature-title mt-2 mb-2">Learn why trigger warnings matter.</h3>
                   <p>It is a respectful way to communicate about deeply personal issues while refraining from delegitimizing someone’s experience.</p>
                </div>
                <div class="feature-box col-lg-4">
-                  <img src="images/search.png" class="img-fluid" alt="Responsive image">
-                  <h3 class="feature-title">Find helpful resources and links.</h3>
+                  <img src="images/search.png" class="img-fluid" style="max-width: 25vw;" alt="Responsive image">
+                  <h3 class="feature-title mt-2 mb-2">Find helpful resources and links.</h3>
                   <p>Mental health and safety are of upmost importance. Take a look at our resources page for guidance and support.</p>
                </div>
             </div>
          </div>
       </section>
-      <!-- BETA Features -->
-      <section class="blue-section">
+
+      <!-- Features Above MD)-->
+      <section class="blue-section d-none d-md-block">
          <div class="container-fluid">
             <div class="row">
-               <div class="feature-box col-lg-4">
-                  <img src="images/filter.png" class="img-fluid" alt="Responsive image">
-                  <h3 class="feature-title">Filter out triggering content.</h3>
-                  <p><br>Reduce distressing material by filtering out sensitive content above and you will have many shows/movies to choose from.</p>
+               <div class="col-4">
+                  <img src="images/filter.png" class="img-fluid" style="max-width: 10vw" alt="Responsive image">
                </div>
-               <div class="feature-box col-lg-4">
-                  <img src="images/people.png" class="img-fluid" alt="Responsive image">
+               <div class="col-4">
+                  <img src="images/people.png" class="img-fluid" style="max-width: 10vw" alt="Responsive image">
+               </div>
+               <div class="col-4">
+                  <img src="images/search.png" class="img-fluid" style="max-width: 10vw" alt="Responsive image">
+               </div>
+            </div>
+
+            <div class="row mt-3 mb-3">
+               <div class="col-4">
+                  <h3 class="feature-title">Filter out triggering content.</h3>
+               </div>
+               <div class="col-4">
                   <h3 class="feature-title">Learn why trigger warnings matter.</h3>
+               </div>
+               <div class="col-4">
+                  <h3 class="feature-title">Find helpful resources and links.</h3>
+               </div>
+            </div>
+
+            <div class="row">
+               <div class="col-4">
+                  <p>Reduce distressing material by filtering out sensitive content above and you will have many shows/movies to choose from.</p>
+               </div>
+               <div class="col-4">
                   <p>It is a respectful way to communicate about deeply personal issues while refraining from delegitimizing someone’s experience.</p>
                </div>
-               <div class="feature-box col-lg-4">
-                  <img src="images/search.png" class="img-fluid" alt="Responsive image">
-                  <h3 class="feature-title">Find helpful resources and links.</h3>
+               <div class="col-4">
                   <p>Mental health and safety are of upmost importance. Take a look at our resources page for guidance and support.</p>
                </div>
             </div>
@@ -113,24 +134,23 @@
       <!-- Submit Entry -->
       <section class="white-section">
          <div class="container-fluid">
-            <div class="row">
-               <div class="col-lg-10">
+            <div class="row text-center">
+               <div class="col-12">
                   <h1>Can’t find the movie or show?</h1>
+               </div>
+               <div class="col-12 mt-3 mb-3">
                   <p>Help us improve our data by summitting a movie/show request!.</p>
                </div>
-               <div class="col-sm">
-                  <br>
-                  <div class="button">
-                     <button type="button" class="btn btn-dark">Submit an entry</button>
-                  </div>
+               <div class="col-12">
+                  <button type="button" class="btn btn-dark">Submit an entry</button>
                </div>
             </div>
          </div>
       </section>
       <!-- Footer -->
-      <footer class="white-section" id="footer">
+      <footer class="white-section bg-dark" id="footer">
          <div class="container-footer">
-            <p>© Copyright 2021 Soothe • Made with lots of caffeine in San Luis Obispo.</p>
+            <p class="text-muted">© Copyright 2021 Soothe • Made with lots of caffeine in San Luis Obispo.</p>
          </div>
       </footer>
       <script src="js/index.js" charset="utf-8"></script>

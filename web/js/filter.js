@@ -26,12 +26,18 @@ function clearTitles(){
     getParentTitles().innerHTML = ""; 
 }
 
-function createTitleHTML(posterURL, name, year, time, genres){
+function addClickListener(div){
+    div.addEventListener("click", () => window.location.href = `title.html${encode(div.id)}`);
+}
+
+function createTitleHTML(posterURL, name, year, time, genres, id){
     let div = document.createElement('div');
     div.classList.add("col-md-4", "mb-5");
 
     let innerDiv = document.createElement('div');
-    innerDiv.classList.add("card", "h-100");
+    innerDiv.classList.add("card", "h-100", "title");
+    innerDiv.id = id; 
+    addClickListener(innerDiv);
     innerDiv.style.maxWidth = "24rem";
 
     let img = document.createElement("img");
@@ -48,7 +54,6 @@ function createTitleHTML(posterURL, name, year, time, genres){
     let p = document.createElement("p");
     p.innerText = String(year) + " | " + String(time) + " | " + String(genres);
     p.classList.add("card-text");
-
 
     cardDiv.appendChild(h4);
     cardDiv.appendChild(p);
@@ -80,6 +85,14 @@ function beautifyGenres(genres){
         return genres[0].trim();
     }
     return genres[0].trim() + "/" + genres[1].trim(0);
+}
+
+function saveJSON(json){
+    localStorage.setItem("json", JSON.stringify(json)); 
+}
+
+function getJSON(){
+    return localStorage.getItem("json"); 
 }
 
 window.onload = function(){
@@ -118,19 +131,20 @@ let title =  {
 }; 
 
 let titles = document.getElementById("titles");
-let titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre)); 
+localStorage.setItem(title._id, JSON.stringify(title))
+
+let titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre), title._id); 
 titles.appendChild(titleHTML)
 
-titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre)); 
+titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre), title._id); 
 titles.appendChild(titleHTML)
 
-titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre)); 
+titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre), title._id); 
 titles.appendChild(titleHTML)
 
-titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre)); 
+titleHTML = createTitleHTML(title.poster, title.name, title.date, beautifyMinutes(title.time), beautifyGenres(title.genre), title._id); 
 titles.appendChild(titleHTML)
 
 console.log(titles);
 console.log(titleHTML)
 titles.appendChild(titleHTML)
-
